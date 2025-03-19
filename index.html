@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hombres talk too</title>
+
+    <meta property="og:image" content="https://i.pinimg.com/736x/0d/93/ff/0d93ff33733e2dcd82f4161a849029ee.jpg">
+    <!-- Otros metadatos de Open Graph -->
+    <meta property="og:title" content="Los hombres también hablan">
+    <meta property="og:description" content="Una Obra de Alecxandro Vaguióre, Dios esta por destruir nuevamente a la humanidad, si Adán no logra comprender el cerebrero femenino, todo acabára, con un nuevo diluvio Universal">
+
+
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+        .paragraph-container {
+            margin-bottom: 1px;
+        }
+        .typewriter-font {
+            font-family: "Courier New", Courier, monospace;
+        }
+        .controls {
+            margin-top: 150px;
+        }
+        p {
+            margin-top: 0;
+            margin-bottom: 0px; /* Ajusta este valor según lo corto que quieras que sea el interlineado */
+        }
+        .nav-button {
+            background-color: rgb(27, 157, 233);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            margin: 5px;
+            border-radius: 15px; /* Esquinas redondeadas */
+        }
+        .nav-button:hover {
+            background-color: rgb(245, 15, 195);
+        }
+        .inline-container {
+            display: block;
+            align-items: center;
+            margin-top: 50px;
+        }
+        .inline-container h2 {
+            display: block;
+            align-items: center;
+            margin-top: 50px;
+        }
+
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: #fff; /* Cambia esto según tu diseño */
+            z-index: 1000;
+            padding: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .header h1 {
+            margin-top: 5px; /* Ajusta este valor según sea necesario */
+            margin-inline-start: 1%;
+        }
+
+        .header h2 {
+            margin: 0; /* Elimina el margen predeterminado del encabezado */
+            /* Añade estilos adicionales según sea necesario */
+        }
+
+        .reload-button {
+            background-color: #ff5f6d;
+            background-image: linear-gradient(315deg, #308af1d1 0%, #f802ae 74%);
+            color: white;
+            border: none;
+            padding: 12px 15px;
+            cursor: pointer;
+            border-radius: 25px;
+            font-size: 13px;
+            font-weight: bold;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
+        }
+        .reload-button:hover {
+            background-image: linear-gradient(315deg, #f802ae 0%, #308af1d1 74%);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+            transform: translateY(-2px);
+        }
+        .reload-button:active {
+            transform: translateY(2px);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        } 
+
+        /* Estilos para el menú hamburguesa */
+        .menu-container {
+            position: top;
+            top: 0px;
+            right: 20px;
+        }
+
+        .menu-button {
+            cursor: pointer;
+            display: flex;
+            flex-direction: column;
+            width: 30px;
+            height: 25px;
+            justify-content: space-between;
+        }
+
+        .menu-button div {
+            height: 4px;
+            background-color: #000;
+            border-radius: 2px;
+            transition: all 0.3s;
+        }
+
+        .menu-content {
+            display: none;
+            flex-direction: column;
+            position: relative;
+            top: 35px;
+            right: 0;
+            background-color: #fff;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+            border-radius: 5px;
+            overflow: hidden;
+        }
+
+        .menu-content a {
+            padding: 10px 50px;
+            text-decoration: none;
+            color: #000;
+            transition: background-color 0.3s;
+        }
+
+        .menu-content a:hover {
+            background-color: #d0b3ff;
+        }
+
+        .menu-button.open .bar1 {
+            transform: rotate(-45deg) translate(-5px, 5px);
+        }
+
+        .menu-button.open .bar2 {
+            opacity: 0;
+        }
+
+        .menu-button.open .bar3 {
+            transform: rotate(45deg) translate(-5px, -5px);
+        }
+
+        .menu-content.open {
+            display: flex;
+        }
+
+        /* Media Queries para responsividad */
+        @media (max-width: 600px) {
+            .header h1 {
+                font-size: 1.5em; /* Ajusta el tamaño del texto en dispositivos móviles */
+            }
+
+            .nav-button {
+                padding: 5px 10px; /* Ajusta el tamaño del padding en dispositivos móviles */
+                font-size: 0.9em; /* Ajusta el tamaño de la fuente en dispositivos móviles */
+            }
+        }
+    </style>
+</head>
+        <!-- Inicio  y PRIMERA ESCENA ♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦♦ -->
+<body>
+    
+    <div class="header">
+        <h1>Los Hombres tambien hablan</h1>
+                    
+        <!-- Aquí puedes agregar tus imágenes y botones -->
+        
+        <button class="reload-button" onclick="hardReload()">Actualizar</button>
+        <button class="nav-button" onclick="location.href='#01_La_Loca'">La Loca</button>
+        <button class="nav-button" onclick="location.href='#02_Adan_y_Jesus'">Adan & Jesús</button>
+        <button class="nav-button" onclick="location.href='#03_Transf_Chicas_Antro'">Transf. Chicas Antro</button>
+        <button class="nav-button" onclick="location.href='#04_Alma_libre'">Alma Libre</button>
+        <button class="nav-button" onclick="location.href='#05_AL_INTERMEDIO'">Intermedio</button>
+        <button class="nav-button" onclick="location.href='#06_llega_EVA'">Llegada de EVA</button>
+        
+    </div>
+
+    <p class="typewriter-font">Actualizado al 19/03/2025 a las 13:00 hrs. </p>
+
+    <div class="paragraph-container">
+        
+      
+        <div class="controls">
+
+         <h2 id="01_La_Loca"></h2>
+                     
+         <p class="Arial"> <strong>ASUNTO:</strong>La historia se desarrolla dentro del cerebro de la mujer mater, Adán
+          y Jesús son enviados por el padre a este espacio como última oportunidad de lograr el entendimiento entre ambos sexos y si no lo logran,
+           mandará un último diluvio universal y la historia de la humanidad ahora si terminará. </p><br>
+
+
+        
+        <div class="inline-container">
+        <h2>La Loca</h2>
+        </div>
+
+        
+
+        <br><p style="color:rgb(165, 1, 1);"class="typewriter-font">Entra una mujer loca al escenario toda vestida de blanco como de manicomio.</p>
+        <br><p style="color:rgb(165, 1, 1);"class="typewriter-font">GRITANDO.</p>
+        <br><p style="color: #f325ae;"><strong>LA LOCA:</strong> La profecía se cumplió!!!!! La profecía se cumplió!!!!!! </p>
+
+        
+
+        <br><p style="color:rgb(165, 1, 1);"class="typewriter-font">Entra el espíritu de la virgen a ella y ésta se transforma</p>
+        <br><p style="color: #f325ae;"><strong>LA LOCA/MARIA:</strong>Una vez más la profecía se cumplió, hace algunos años el plantea tierra se quedó sin mujeres y el supremo nos dio la oportunidad de que la raza humana continuara siempre y cuando lográramos el entendimiento entre ambos sexos, fue entonces cuando decidió mandarnos a Eva y a mi, a la vagina de una última mujer moribunda a punto de dar a luz, al que pudiera ser el último humano nacido sobre este planeta, una mujer permitiría la subsistencia de la raza humana y con un hombre la historia terminaría  y la decisión fue unánime, decidimos que fuera mujer. Sin embargo años después los hombres y las mujeres no han podido comprenderse y siguen luchando para dominar este planeta unos contra otros, siguen peleando para saber quien es el más fuerte y someter al otro. Es por eso que el Padre ha decidido darnos ahora si una última oportunidad para lograr el entendimiento de lo contrario enviara un nuevo diluvio universal para terminar con la humanidad. </p>
+        <br><p style="color:rgb(165, 1, 1);"class="typewriter-font">Llama a los personajes</p>
+        <br><p style="color: #f325ae;"><strong>LA LOCA/MARIA:</strong>Jesús, Adán!!!! Ustedes han sido enviados al cerebro de la mujer mater, en este cerebro se encuentran todos los pensamientos y sentimientos de todas las mujeres del mundo. Los pensamientos positivos se almacenan en estos pequeños papeles de color rosa, los negativos en los papeles rojos y los que son de suma importancia o han trascendido, se almacenan en los papeles Dorados. Ustedes han sido seleccionados para tomar la última decisión más importante de la humanidad, si logran comprender el cerebro femenino, la historia continua, de lo contario la historia de la humanidad esta vez si se termina. Las mujeres hablan pero los hombres también hablan y esta vez ellos tienen la ultima palabra!!!! Que Dios nos agarre confesados</p>
+
+
+        <h2 id="02_Adan_y_Jesus"></h2>
+
+
+        <br><p style="color:rgb(165, 1, 1);"class="typewriter-font">María sale de el cuerpo de la Loca y se va gritando</p>
+        <br><p style="color: #f325ae;"><strong>LA LOCA:</strong> La profecía se cumplió!!!!! La profecía se cumplió!!!!!! </p>
+        <br><br>
+
+        
+        <h2>Adan y Jesús</h2>
+      </div>
+
+
+         <br><p style="color: #00af09;"><strong>ADAN: </strong>Wow, ¡¡¡¡increíble, fascinante, extraordinario!!!!</p>
+         <br><p style="color: #053ef8;"><strong>JESUS: </strong>(Sorprendido) Que????</p>
+         <br><p style="color:rgb(165, 1, 1);"class="typewriter-font">(Llega un nuevo pensamiento de una mujer al cerebro Mater) (Los dos se paran y van hacia el para abrir el papelito)</p>
+         <br><p style="color: #00af09;"><strong>ADAN: </strong>¡¡¡¡¡Es que yo no conocía un cerebro!!!!!</p>
+         <br><p style="color: #053ef8;"><strong>JESUS: </strong>Adán… tienes uno, bueno… se supone, aunque creo que no lo has estrenado y por eso estamos aquí.</p>
+         <br><p style="color: #00af09;"><strong>ADAN: </strong>¿¿¿Cómo???…no entendí</p>
+         <br><p style="color: #053ef8;"><strong>JESUS: </strong>Me imagino, pero mira no te preocupes poco a poco lo irás comprendiendo (Aparte) eso espero</p>
+         <br><p style="color: #00af09;"><strong>ADAN: </strong>Si como tu digas…pero, ¿Qué hacemos aquí?</p>
+         <br><p style="color: #053ef8;"><strong>JESUS: </strong>(Poco desesperado de que Adán no entienda) Mira… María nos dijo que tenemos que lograr el entendimiento entre ambos sexos, nosotros los hombres tenemos que lograr comprender el cerebro de la mujer, como funciona, sus emociones, sus sentimientos, ¡¡¡¡etc.… de lo contario esta vez mi Padre si acabará con la humanidad!!!!</p>
+         <br><p style="color: #00af09;"><strong>ADAN: </strong>(En la escenografía del cerebro mater hay papelitos pegados con pensamientos e ideas de varias mujeres y Adán toma uno) No inventes, no juegues, no lo puedo creer.</p>
+         <br><p style="color: #053ef8;"><strong>JESUS: </strong>(Va a continuar hablando) Así es Adán por eso es de suma importancia que…</p>
+         <br><p style="color: #00af09;"><strong>ADAN: </strong>(leyendo el papelito) (Sorprendido y emocionado pues la admira mucho) Aquí hay un pensamiento Blanco, y de este color no nos explicaron nada, y es de esa gran actriz, ¡¡¡¡¡de esa mujer tan guapa, tan sensual, extraordinaria cantante y muuuuy inteligente!!!!! Que tanto admiro</p>
+         <br><p style="color: #053ef8;"><strong>JESUS: </strong>Sí Adán estamos en el cerebro femenino mater, o sea aquí están todos los sentimientos, pensamientos, ideas, emociones etc. de todas las mujeres, algo así como “The Matrix femenino” pero a ver a ver, ¿de quién dices que es ese pensamiento que está en el papel blanco?</p>
+         <br><p style="color: #00af09;"><strong>ADAN: </strong>(Suspirando) De Ninel Conde.</p>
+         <br><p style="color: #053ef8;"><strong>JESUS: </strong>¿¿¿A sí y que dice???</p>
+         <br><p style="color: #00af09;"><strong>ADAN: </strong>“Dios nos ayude en esta desgracia, este Surimi es lo peor que le pudo ocurrir a Indonesia” .</p>
+         <br><p style="color: #053ef8;"><strong>JESUS: </strong>(Poco enfadado) A si recuerdo ese suceso, ahora entiendo porque está en blanco el papelito, mi padre me encomendó esa plegaria de Ninel y ahí me tienes en friega buscando el Surimi contaminado por todo Indonesia, pensé que le habían puesto pescado echado a perder o algo así y quería acabar con ese Surimi malo malo pero jamás encontré nada, por eso se murió tanta gente, me distraje con el Surimi y no atendí lo del Sunami, y obvio mi papi me regaño, por eso no quiero saber nada de esa mujer, ahora cuando me pide algo… (Hace las señas muy infantiles) No oigo, no oigo soy de palo tengo orejas de pescado… (Quiere seguir con la broma) y no pescado del malo, de ese que andaba buscando del Surimi de Ninel si no… (Recapacita) Bueno, Adán digamos que esa mujer no es muy inteligente verdad y me metió en varios conflictos.</p>
+         <br><p style="color: #00af09;"><strong>ADAN: </strong>Pero está bien buena</p>
+         <br><p style="color: #053ef8;"><strong>JESUS: </strong>¿Queeeeee?</p>
+         <br><p style="color: #00af09;"><strong>ADAN: </strong>Que es una mujer muy buena...</p>
+         <br><p style="color: #053ef8;"><strong>JESUS: </strong>(Muy naturalmente) Ahhh Eso que ni que, ya le voy a volver a hacer caso. Pero ya basta de hablar de Ninel, ahora a lo que nos truje, te tengo que explicar como funciona el cerebro femenino hasta que logres comprenderlo, esa es mi misión. (Medio harto y cansado) Otra vez salvar a los humanos!</p>
+         <br><p style="color: #00af09;"><strong>ADAN: </strong>¡¿Pero que me vas a explicar?!Yo conozco a las mujeres perfectamente!!!!!</p>
+         <br><p style="color: #053ef8;"><strong>JESUS: </strong>¡¡¿Ah sí…?!!</p>
+         <br><p style="color: #00af09;"><strong>ADAN: </strong>¡¡¡¡¡Claro!!!!! Te recuerdo que llevo toda la eternidad viviendo con Eva, la primer mujer sobre la tierra y yo fui el primer hombre en convivir con una mujer, como no las voy a comprender?????? Y a parte porque solo yo???? Me están echando a mi la culpa de todo lo que han hecho esos weyes.</p>
+         <br><p style="color: #053ef8;"><strong>JESUS: </strong>Porque te recuerdo que todos son tus parientes, de ti salieron tus hijos, Caín y Abel por cierto muy mal educados esos muchachitos y de ahí los hijos de tus hijos que son tus nietos y luego tus tataranietos y luego tus tata tataranietos…</p>
+         <br><p style="color: #00af09;"><strong>ADAN: </strong>Bueno si, si ya entendí</p>
+         <br><p style="color: #053ef8;"><strong>JESUS: </strong>¿¿¿Eso espero, o quieres que te lo explique con manzanas??? Bueno no, manzanas no porque luego se te atoran en la garganta…Si tu logras cambiar, toda la humanidad masculina logrará cambiar.</p>
+         <br><p style="color: #00af09;"><strong>ADAN: </strong>¿Y porque nosotros tenemos que cambiar y no ellas?</p>
+         <br><p style="color: #053ef8;"><strong>JESUS: </strong>Adán, este mundo ha estado liderado por hombres, gobernado por hombres, construido por hombres</p>
+         <br><p style="color: #00af09;"><strong>ADAN: </strong>¡¡¡¡¡¡Ya ves!!!!!! Pus porque somos chingones!!!!! ¿¿¿¿¿¿Dónde está lo malo en eso??????</p>
+         <br><p style="color: #053ef8;"><strong>JESUS: </strong>Justo por eso, porque piensan que solo ustedes son los chin... fregones y no han dejado a la mujer desarrollarse de la mejor manera, si las hubieran dejado, sin duda ellas también hubieran podido colaborar mucho con la construcción de esta sociedad.</p>
+         <br><p style="color: #00af09;"><strong>ADAN: </strong>¡¡¡¡Bueno, pero tú también eres hombre y fuiste un chingón!!!! Eres un chingón!!!!! La mayoría del mundo te sigue o al menos te reconoce, bueno tan chingón eres que la neta la neta aquí entre nos!!! … eso de convertir el agua en vino fue un detallazo!!!!! Esa boda hubiera sido un fiasco y muy aburrida si no fuera por ti, gracias carnal, ¡¡que buen peda!!</p>
+         <br><p style="color: #053ef8;"><strong>JESUS: </strong>Eso lo hice porque…bueno no estamos hablando de eso, si no de que los hombres no le han dado el lugar que se merece a la mujer, no la han dejado destacar. Y si, soy hombre pero te recuerdo que vengo de una mujer, del vientre de una mujer, sin ella yo no existiría!!!! Ni ningún hombre tampoco.</p>
+         <br><p style="color: #00af09;"><strong>ADAN: </strong>Pero acuérdate que yo le di una costilla al supremo para que me hiciera una vieja, por eso somos más importantes.</p>
+         <br><p style="color: #053ef8;"><strong>JESUS: </strong>A ver Adán, eso es una fábula bíblica para explicar el nacimiento del universo, pero bueno…supongamos que fue verdad, Dios te hizo a su imagen y semejanza y andabas por ahí solitario y aburrido en el paraíso, (Se burla e imita a Adán) “Es que me siento solo, es que no tengo nadie con quien platicar” tus fiestas y reuniones eran con los gallos y no los de Querétaro si no las aves y ahí andabas cacareando con ellos, rugiendo con los leones… rebuznando con los burros… tal vez por eso eres tan burro…</p>
+         <br><p style="color: #00af09;"><strong>ADAN: </strong>¿Bueno de qué lado estás?</p>
+         <br><p style="color: #053ef8;"><strong>JESUS: </strong>Es justo lo que no entiendes, no estoy de lado de nadie y no vengo a defender a ninguno de los dos sexos, ¡¡¡¡¡estamos aquí para que entiendas que ambos son iguales y logres comprenderlas mejor!!!!! Solo así salvaremos a la humanidad.</p>
+         <br><p style="color: #00af09;"><strong>ADAN: </strong>(Desesperado) Pero Jesús!!!!! Es que a veces las mujeres son tan, tan…como explicarte???? A ya se!!!!!! Voy a hacer lo mismo que en la obra pasada</p>
+         <br><p style="color:rgb(165, 1, 1);"class="typewriter-font">(transformación a monólogo) (Jesús como no queriendo le sigue el juego y dan la vuelta de transformación)</p>
+         <br><p style="color: #00af09;"><strong>ADAN: </strong>(De manera cómica) Hola, soy Beatriz, tengo…. ¡¡¡¡Bueno no voy a decir mi edad porque las mujeres nunca decimos nuestra edad (Risa estúpida) jijijiji bueno tengo 20 años (Jesús desde atrás tose) bueno 26 (Jesús vuelve a toser) bueno 30 y ya!!!! Déjame en paz y no me interrumpas. Sigo soltera, porque toooodos los hombres son iguales, desgraciados, infelices, mal nacidos. Yo hace algún tiempo andaba con Braulio un niño lindo, inteligente, detallista y muy comprometido, pero estaba medio feíto y pues era muy aburrido, solo quería estar conmigo toooodo el tiempo y me llenaba de flores y detalles casi diario y pues me dio huevita (otra vez la risa estúpida) jijijiji y por eso lo corté. ¿Porque no puedo encontrar a un hombre que sea atrevido, divertido, rudo, pero a la vez tierno y romántico cuando yo quiera o lo necesite???!!!! Pues creo que me quedaré solterona para toda la vida pinches hombres!!!!!! Ash ya me enojé ya me voy!!!!!! (Salen de la transformación)</p>
+         <br><p style="color: #00af09;"><strong>ADAN: </strong>Ves Jesús, quien puede entender a las mujeres, esta chava tenia a un hombre bueno, tierno, detallista y quería estar con ella todo el tiempo, pero como fue demasiada miel, se hartó y lo mando a la fregada y que porque estaba medio feíto. No manches!!!!! Debo reconocer que ese tal Braulio no era de mis parientes mas evolucionados, si parecía changuito, a ese wey no lo dieron a luz, le dieron un apagón, bueno con decirte que su madre en vez de darle pecho le dio la espalda…</p>
+         <br><p style="color: #053ef8;"><strong>JESUS: </strong>Bueno si ya entendí que el wey estaba feo, pero eso es lo de menos, la belleza es subjetiva, lo importante es que los hombres entiendan que debe de haber una media, las mujeres no son de su propiedad, no las pueden atosigar de esa manera, ellas también necesitan su espacio, salir con sus amigas, disfrutar de las cosas que les gustan hacer, ¡¡¡así como lo hacen ustedes!!! ¿A ver a ti que es lo que te gusta hacer?</p>
+         <br><p style="color: #00af09;"><strong>ADAN: </strong>Tomar Cerveza (Como zombi) cerveza, cerveza, cerveza</p>
+         <br><p style="color: #053ef8;"><strong>JESUS: </strong>¡¡¡¡Si Cerveza!!!! (Recapacita) Nooooooo Adán, aparte de la cerveza</p>
+         <br><p style="color: #00af09;"><strong>ADAN: </strong>A pues… ver el futbol</p>
+         <br><p style="color: #053ef8;"><strong>JESUS: </strong>El Futbol, ok. Cuando ves el futbol, no te gusta que nadie te interrumpa, te gusta verlo solo o con tus amigos, te gusta estar con gente que también le gusta el futbol, porque es tu espacio, es tu momento.</p>
+         <br><p style="color: #00af09;"><strong>ADAN: </strong>Sí pues eso sí</p>
+         <br><p style="color: #053ef8;"><strong>JESUS: </strong>Lo mismo necesitan ellas, estar con personas que disfruten las mismas cosas, necesitan su espacio para estar con sus amigas, salir a divertirse</p>
+         <br><p style="color: #00af09;"><strong>ADAN: </strong>Pero el Futbol es divertido, lo que les gusta hacer a ellas da hueva. Salir de compras, ir por un café, peor aún ver una telenovela (Se para y representa una novela) José Eduardo Santiago Limantur tengo que decirte algo, el hijo que espero no es tuyo tan tan tan…. No me digas eso Sofía Magdalena de Iturriaga, sabes que necesito tener descendencia para que mi padre me deje la herencia… tan tan tan Lo se lo se, discúlpame yo no quería pero el me obligó!!!! Fue una noche de copas una noche loca…</p>
+         <br><p style="color: #053ef8;"><strong>JESUS: </strong>A ver a ver a ver Adán, luego sacas tus frustraciones de ser Actor, aquí no estamos en un teatro (Voltea a ver al público) O si?</p>
+         <br><p style="color: #00af09;"><strong>ADAN: </strong>Si tienes razón, pero es que en serio, las cosas que hacen las mujeres dan mucha hueva, deberían de ser más divertidas</p>
+         <br><p style="color: #053ef8;"><strong>JESUS: </strong>En la actualidad ya hay muchas mujeres que les gusta el futbol e incluso muchas que lo practican</p>
+         <br><p style="color: #00af09;"><strong>ADAN: </strong>Si, pero no la mayoría, en cambio yo no conozco a ningún hombre que no le guste el futbol</p>
+         <br><p style="color: #053ef8;"><strong>JESUS: </strong>A mí no me gusta el futbol y a muchos tampoco</p>
+         <br><p style="color: #00af09;"><strong>ADAN: </strong>¿¿¿¿¿¿No te gusta el futbol?????? No lo puedo creer</p>
+         <br><p style="color: #053ef8;"><strong>JESUS: </strong>Pues no, no me gusta. Digamos que los hombres regresan un par de siglos atrás cuando lo ven, se vuelven como cavernícolas y sobre todo los que son muy aficionados (imita a los aficionados como chango) u u u u u u u vamos equipo, u u u u vamos equipo!!!! Y aún peor, pierden el contexto de la realidad, se ponen a hablarle a un televisor, como si los que están jugando los escucharan (Vuelve a imitar) pásala, pásala, pásala, no idiota!!!!!! Que, que fue eso… fuera de lugar, que te pasa arbitro que estas ciego o que???? Creen que el jugador va a voltear a la tele a decirle “Si perdóname Adán, es que no vi que el Chicharito estaba libre por la lateral, pero que bueno que mes estás viendo en la tele para que tu me vayas diciendo que hacer, a la próxima si te hago caso. O el Arbitro se fuera a su casa bien ofendido “No pues es que el Adán que estaba viendo la tele me mentó la madre 3 veces en este partido, creo que si la regué me siento bien mal con el Adán” Nooooooooooo a esos cuates que están en la tele les vale un comino lo que estás diciendo o gritando, no los escuchan hombres, la tele no tiene orejas si me entienden verdad!!!!</p>
+         <br><p style="color: #00af09;"><strong>ADAN: </strong>Bueno, pero es divertido gritar, meterte en el juego, ¡¡¡¡es parte de la pasión futbolera!!!! Y prefiero estar hablando de futbol que del precio del jitomate (imita a las mujeres) hay Juanita, ya subió mucho el jitomate, antes me costaba 18 pesos el kilo y ahora ya está en casi 20, donde vamos a parar…deja de eso margarita, las tortillas, yo antes compraba un kilo, ahora apenas si llevo una docena, y mi marido cree que con lo que me da, voy a hacer milagros, yo ya no puedo ya no me alcanza!!!! (Termina de imitarlas) Todo el tiempo quejándose de la vida!!!!!! Todavía que uno les da el dinero y ellas siempre quieren más, más y más.</p>
+         <br><p style="color: #053ef8;"><strong>JESUS: </strong>Si Adán están viviendo tiempos complicados, y es verdad que la economía no está nada bien en la mayoría de los hogares, pero los hombres les han dejado la labor a las mujeres de administrar y proveer de alimento a la familia con lo que ustedes les dan. Si ustedes fueran a las compras se darían cuenta que es real que a veces con lo que aportan, ya no alcanza</p>
+         <br><p style="color: #00af09;"><strong>ADAN: </strong>Si pero también hay mujeres que se la pasan gastando de mas, en puras estupideces, que si el labial indeleble súper mega red, que si el aparato automático para hacer trenzas, a mi, Eva siempre me dice que necesita dinero para maquillaje y tiene dos bolsas llenas de maquillaje, si se pusiera en la cara todo lo que tiene ahí adentro, parecía un lienzo de Picasso!!!! Y la ropa, nunca tiene ropa (La Imita) Adán necesito un nuevo vestido, es que no tengo que ponerme para la fiesta de Sor Juana!!!!! (termina de imitarla) Que???????????? Ella ocupa 3 de las 4 puertas que tiene nuestro closet y 5 de 6 cajones y todo está hasta la madre de ropa y tiene más de 20 pares de zapatos, a ese pobre closet ya no le cabe nada!!!! Y yo solo tengo unas cuantas playeras, unas camisas, tal vez 10 pantalones, un traje para las fiestas, mis zapatos del diario, mis tenis y mis chanclas!!!!!! Carajo!!!!!! Y ella todavía quiere un vestido nuevo para la fiesta de Sor Juana?????? (La Imita) Es que ese ya me lo vieron, como quieres que vaya con el mismo vestido que fui a la fiesta de Afrodita!!!! Eso fue hace 2 siglos “Si pero me lo van a reconocer y aparte voy a salir igual en las fotos” Pues combínalo, ponte un chalina encima, córtalo, hazle algo no se!!!! Pero otro vestido!!!!!! Y de las joyas ni hablamos, cada que va al mercado, al super o al centro comercial, regresa con una pulsera, un collar, unos aretes, algo, siempre con algo!!!!! Que porque estaba en oferta!!!!! Y yo ni a pinche reloj llego. Si había oferta me hubieras comprado unos calzones que los 7 que tengo ya están todos agujerados, pero noooooo (La imita) No te preocupes mi amor, estos todavía aguantan, les voy a poner un nuevo resorte y los voy a meter en cloro para que te queden blancos blancos porque ya los dejaste bien manchados con tu rajita de canela, pero te van a quedar muy bien mi amor ya veras…. Jija de la chi…</p>
+         <br><p style="color: #053ef8;"><strong>JESUS: </strong>Ya tranquilo Adán te va a dar un infarto!!!!! Y déjame decirte algo, en la actualidad los hombres son mas consumistas que las mujeres aunque te cueste creerlo, A sí lo reveló un estudio del Departamento de Investigación de Merca2.0, una asociación especializada en marketing, el cual revela que 76.4% de los hombres mexicanos gastan un promedio de mil a cinco mil pesos cuando se van de compras, mientras que la proporción de mujeres que desembolsa la misma cantidad en las tiendas, apenas alcanza 66.7%; cifra que deja bien claro quiénes son los reyes del consumo en México; realidad que según especialistas no es diferente en otros países o culturas.</p>
+         <br><p style="color: #00af09;"><strong>ADAN: </strong>Bueno si, puede ser, ¡¡¡¡¡pero es que la ropa de los hombres es más cara!!!!! Nosotros compramos calidad y no cantidad, las mujeres entre más ropa, zapatos y joyas tengan se sienten más guapas</p>
+         <br><p style="color: #053ef8;"><strong>JESUS: </strong>Pues si puede ser, pero lo hacen para agradarles a ustedes</p>
+         <br><p style="color: #00af09;"><strong>ADAN: </strong>No no no , no es verdad, la mayoría de las veces las mujeres se visten para otras mujeres, para competir, para saber quien es la más guapa de todas, son del mismo sexo y ellas solitas se atacan y se destruyen, siempre se están criticando una a la otra. Te voy a ensañar!!! Me prestas tu cuerpo?.</p>
+         <br><p style="color: #053ef8;"><strong>JESUS: </strong>No Adán, yo no le hago a eso!!!!</p>
+
+
+         <h2 id="03_Transf_Chicas_Antro"></h2>
+
+
+         <br><p style="color: #00af09;"><strong>ADAN: </strong>No Jesús, para hacer una transformación y enseñarte como son las mujeres</p>
+         <br><p style="color: #053ef8;"><strong>JESUS: </strong>¡¡¡Está bien!!! (Los dos se transforman)</p>
+
+
+         
+         <h2>Transformacion en Chicas en el antro</h2>
+         
+
+
+         <br><p style="color:rgb(165, 1, 1);"class="typewriter-font">(Las dos se ponen a bailar con la música de antro, caminan por el espacio y se encuentran, se emocionan y se abrazan)</p>
+         <br><p style="color: #00af09;"><strong>ADAN: </strong>¡¡¡¡¡¡¡¡¡Amiga!!!!!!!!! Que gusto verte, ¿¿¿¿qué haces aquí wey????</p>
+         <br><p style="color: #053ef8;"><strong>JESUS: </strong>¡¡¡¡¡Qué onda wey!!!!! Lo mismo que tu, me vine a divertir un rato</p>
+         <br><p style="color: #00af09;"><strong>ADAN: </strong>¡¡¡¡Que padre wey!!!! Siglos sin verte amigui</p>
+         <br><p style="color: #053ef8;"><strong>JESUS: </strong>¡¡¡¡¡Ya se desde la prepa, no manches!!!!!</p>
+         <br><p style="color: #00af09;"><strong>ADAN: </strong>¡¡¡¡Ay ya se!!!! ¡¡¡¡Y sigues igualita eeeeee ya pásame la receta!!!!</p>
+         <br><p style="color: #053ef8;"><strong>JESUS: </strong>¡¡¡¡Ay amigui tu no vendes piñas tu estas idéntica te ves súper, que padre está tu vestido!!!!</p>
+         <br><p style="color: #00af09;"><strong>ADAN: </strong>¡Gracias amigui tú que delgada estas no inventes! De verdad que los años no pasan por ti neta neta</p>
+         <br><p style="color: #053ef8;"><strong>JESUS: </strong>¡¡¡¡Gracias hermosa!!!! ¿¿¿Oye y sigues con Jorge???</p>
+         <br><p style="color: #00af09;"><strong>ADAN: </strong>¡¡¡¡Si wey ya llevamos un buen juntos, ya nos vamos a casar a ver si vas a mi boda!!!!</p>
+         <br><p style="color: #053ef8;"><strong>JESUS: </strong>¡¡¡¡Wow!!!! Que padre, claro que siiiiiiiii, me da mil gusto, hacen super linda pareja</p>
+         <br><p style="color: #00af09;"><strong>ADAN: </strong>¿¿¿Gracias amiguiiiiii, oye y tu ya tienes novio??? ¡¡¡¡¡O sigues solterita y libre!!!!!</p>
+         <br><p style="color: #053ef8;"><strong>JESUS: </strong>Ay yo libre como el viento amigui, disfrutando de la vida, ¡¡¡¡ya sabes que a mi eso de los novios como que no es lo mío!!!!</p>
+         <br><p style="color: #00af09;"><strong>ADAN: </strong>¡¡¡Bien por ti amigui!!! Que padre!!!! Tu sigue viviendo la vida loca, que vida solo hay una!!!! ¡¡¡¡Ya te llegará el indicado ya verás!!!!</p>
+         <br><p style="color: #053ef8;"><strong>JESUS: </strong>¡¡¡¡¡Ya se amiga, ya se!!!!! Neta me da mil gusto verte</p>
+         <br><p style="color: #00af09;"><strong>ADAN: </strong>¡¡¡¡Igualmente preciosa!!!! Pero bueno te dejo, porque me está esperando Jorge en la mesa va, pero no nos despedimos, por aquí nos seguimos viendo</p>
+         <br><p style="color: #053ef8;"><strong>JESUS: </strong>Claro que si amigui, por aquí andamos, ¡¡¡¡nos vemos al ratín!!!!</p>
+         <br><p style="color:rgb(165, 1, 1);"class="typewriter-font">(Las dos se separan y se van cada una a una esquina a romper cuarta pared con el público)</p>
+         <br><p style="color: #00af09;"><strong>ADAN: </strong>(hablando con alguien del público como si fuera Jorge, su novio) ¿¿¿¿No inventes amor, ya viste quien está ahí???? Oseaaaaaaa se ve viejísima la pobre!!!! Ya está toda llena de arrugas, pobre de mi amigui se ve fatal!!!! Pero pues la entiendo, mi vida, sigue solterona, como es tan fea!!!!! ¡¡¡¡Y tan wuila Pobrecita!!!!</p>
+         <br><p style="color: #053ef8;"><strong>JESUS: </strong>(Hablando con alguien del público) Ya viste amiga, como viene vestida, que horror de vestido y está tan gorda!!!!!!! Y viene con Jorge, siguen juntos lo puedes creer???? Tan feo que está el tipo pero bueno, siempre hay un roto para un descocido!!!!! Pobres de sus hijos, pero bueno, Jorge tiene lana y ella siempre fue bien interesada, ¡¡¡¡a ver cuánto le dura el gusto!!!!(Se acercan una vez más) Bueno amigui ya me voy, cuídate mucho y me invitas a la boda eeeeeee me va a dar mil gusto compartir ese momento tan especial con ustedes</p>
+         <br><p style="color: #00af09;"><strong>ADAN: </strong>Yo también ya me voy amigui, mañana tenemos que ir a ver mil cosas de mi boda, ¡¡¡¡¡y claro que te voy a invitar tú no puedes faltar!!!!! Te mando la invitación vale, nada mas un boleto verdad???? O bueno te mando 2 por si vas con tu prima vale</p>
+         <br><p style="color: #053ef8;"><strong>JESUS: </strong>¡¡¡¡¡¡Claro que si amiga, ya estás!!!!!! Cuídate mil</p>
+         <br><p style="color: #00af09;"><strong>ADAN: </strong>Igualmente hermosa, nos vemos en mi boda, nunca cambies y de verdad que bien te ves eeeeee</p>
+         <br><p style="color: #053ef8;"><strong>JESUS: </strong>Tú también preciosa, cuídate, bye bye</p>
+         <br><p style="color:rgb(165, 1, 1);"class="typewriter-font">(Termina transformación)</p>
+         <br><p style="color: #00af09;"><strong>ADAN: </strong>(impactado) Viste eso????? O sea que pedo con las mujeres????? Son más víboras que la serpiente que me obligó a comerme la manzana en el paraíso</p>
+         <br><p style="color: #053ef8;"><strong>JESUS: </strong>¡¡¡¡Adán nadie te obligó a comerte esa manzana, tu tenías el libre albedrío al igual que todos los seres humanos!!!! Y te voy a pedir un favor, no me vuelvas a pedir mi cuerpo para hacer a una mujer, es muy desgastante ser mujer!!!! ¡¡¡Esto de andar en tacones no es lo mío!!! (Hace la mímica de quitárselos) Yo no se porque las mujeres los utilizan, si que lastiman los pies!!!! Con razón la gran mayoría traen en sus bolsas o en el auto un par de sandalias para después cambiárselos</p>
+         <br><p style="color: #00af09;"><strong>ADAN: </strong>Exactamente, yo no se porque gastan tanto en zapatos y sobre todo para ir a los eventos especiales, si después de unas horas ya que tooooodo el mundo se los vio, se los quitan para empezar a bailar, que para estar mas cómodas. Porque no se van desde un principio a la boda o a los 15 años en unas pinches chanclas!!!! Aparte de todo son masoquistas!!!! De verdad que a las mujeres les gusta el sufrimiento. No definitivamente no las entiendo</p>
+         <br><p style="color: #053ef8;"><strong>JESUS: </strong>Te recuerdo que si queremos que la humanidad continúe tenemos que lograr entenderlas</p>
+         <br><p style="color: #00af09;"><strong>ADAN: </strong>No pues yo creo que la humanidad ahora si ya valió madres, no las entiendo</p>
+         <br><p style="color: #053ef8;"><strong>JESUS: </strong>¡¡¡¡Si la verdad las mujeres son muy complicadas!!!! ¡¡¡¡Padre ayúdanos por favor!!!!</p>
+         <br><p style="color: #00af09;"><strong>ADAN: </strong>¡¡¡¡¡Si son muy complicadas!!!!! Y siempre nos ponen a los hombres como los malos, y no somos tan malos, ellas también tienen bastante cola que les pisen, (Morbo) Unas mas cola que otras eso que ni que… Como la Ninel (Recapacita) No, ¡¡¡¡¡digooo!!!!!, me refiero a cosas malas que han hecho a lo largo de la historia.</p>
+         <h2 id="04_Alma_libre"></h2>
+         <br><p style="color: #00af09;"><strong>ADAN: </strong>Por ejemplo, Elizabeth Báthory, una famosa asesina en serie húngara del siglo XV. Ella secuestraba a campesinas de la aldea, las asesinaba y se bañaba en su sangre, pues creía que así se mantendría joven y hermosa. O una más conocida, la mítica Dalila, la que utilizó sus encantos para enamorar a Sansón, quien seducido confesó que el secreto de su fuerza estaba en su cabellera. Ella lo durmió y le cortó el cabello, lo que permitió a los filisteos, dominarlo, sacarle los ojos y llevarlo a Gaza. O una clásica de la maldad femenina es Cleopatra. Esta mujer utilizó su belleza para lograr todo lo que se proponía, fue amante de los poderosos de su época Julio César y Marco Antonio. Pero además tenía su cuota de maldad bien desarrollada se apoderó del trono de Egipto después de que su hermano, se ahogara en el Nilo. ¡¡¡¡Pinches viejas!!!! Noooo si son cabronas!!!!!</p>
+                  
+         <h2>Alma Libre</h2>
+
+         <br><p style="color: #053ef8;"><strong>JESUS: </strong>(Jesús toma un papelito rojo del cerebro mater) ¡¡¡Y mira este, éste es de una mujer actual!!! El pensamiento se llama Alma Libre. (Lo lee)</p>
+         <br><p style="color: #053ef8;"><strong>JESUS: </strong>Soy Evangelina Murillo, tengo 37 años, estuve casada con Efraín durante 7 años, tuvimos 3 hijos, uno de 6, una esquincla de 4 y el más pequeño que es mi angelito, a este si lo quiero porque no es hijo de este muerto de hambre, mi ex esposo me dejó por serle infiel con varios hombres, el muy imbécil se dio cuenta tantosaños después, si esto lo hacía desde que éramos novios. Solo me case con el, para largarme de mi casa, pues mi familia era muy católica y no me dejaban salir a ningún lado y yo siempre fui un alma libre, desde muy pequeña seduje a mi tio y me acosté con el, después a varios primos y también los gocé. Pero ya de adolescente mis padres se empezaron a dar cuenta y me amarraron las riendas, por eso me case con este perdedor. Seguí saliendo con varios hombres, me gustaba el sexo fuerte y descontrolado, me gustaba amarrarlos y pegarles con objetos. Pero cuando mi esposo se dio cuenta de ello, me abandono… y a mi nadie me deja!!!! Yo los dejo a ellos, así que lo hice pagar, le juré que iba a cambiar y el muy idiota todavía me creyó, lo invite a cenar a la casa, a el y a mis hijos, pues este desgraciado se los había llevado, que porque yo era una persona toxica. Comimos una deliciosa cena que yo misma prepare con un ingrediente especial en su plato, lo envenene, el pobre cayó al suelo y escupía saliva por la boca como perro rabioso, después fui tras sus hijos, pues ellos también pagarían el abandono y mate a cada uno de ellos con el cuchillo con el que había preparado la cena, fue tan divertido!!! al final maté a mi pequeño, le pedí perdón pero yo no iba a continuar sola, yo no podía con el, pero se que el me perdono. No me arrepiento de nada, pronto saldré de aquí y volveré a hacer mi vida. Dicen que estoy loca, pero no, yo solamente soy un alma libre.</p>
+         <br><p style="color:rgb(165, 1, 1);"class="typewriter-font">(Hacia el cielo) Padre, ya se de que niños habla, lo bueno es que ya están en tu reino junto con su padre que tanto los ama (Muy triste)</p>
+         <br><p style="color: #00af09;"><strong>ADAN: </strong>¡¡¡¡¡¡Hasta escalofríos me dio (Rompe) cu cu pinche vieja loca wey!!!!!! Perdón, Jesús. Ya ves!!!! Y dicen que los hombres somos los malos!!!!!! Esta vieja le gana a cualquiera, como puede haber madres que sean capaces de matar a sus propios hijos, bueno ni los animales lo hacen!!!!! Y nosotros somos la raza pensante???? Creo que ahí Dios se equivoco</p>
+         <br><p style="color: #053ef8;"><strong>JESUS: </strong>Adán no juzgues a Dios y te repito que el ser humano, hombres y mujeres tienen libre albedrio para tomar sus propias decisiones. Efectivamente también hay mujeres malas, nadie dijo que no</p>
+         <br><p style="color: #00af09;"><strong>ADAN: </strong>¿¿¿¿Y así quieres que las entienda???? Perdón Jesús, pero yo creo que ahora si la humanidad va a terminar, ¡¡¡¡no he logrado comprenderlas ni un poquito y menos con estas cosas!!!!</p>
+         <br><p style="color: #053ef8;"><strong>JESUS: </strong>Si lo se Adán, pero también hay mujeres muy buenas</p>
+         <br><p style="color: #00af09;"><strong>ADAN: </strong>(Morbosamente) Si como la Ninel</p>
+         <br><p style="color: #053ef8;"><strong>JESUS: </strong>¡Ya Adán que no puedes dejar de pensar de manera morbosa en el cuerpo de la mujer!</p>
+         <br><p style="color: #00af09;"><strong>ADAN: </strong>¿¿¿¿Qué???? Pues si para eso fui creado, para reproducirme!!!!! El de allá arriba dijo “Adán, Eva pooooblen el mundo” y pues yo solo hice mi chamba, ya sabes que a mí se me da eso, ¡¡¡¡soy todo un hombre bragado!!!!</p>
+         <br><p style="color: #053ef8;"><strong>JESUS: </strong>Pues si, pero los hombres se la pasan pensando todo el tiempo en sexo, atosigando a las mujeres que les parecen atractivas, y las mujeres son mas que un cuerpo bonito, ellas lo que quieren es que las puedas ver también por dentro</p>
+         <br><p style="color: #00af09;"><strong>ADAN: </strong>No pues si, si las veo por dentro</p>
+         <br><p style="color: #053ef8;"><strong>JESUS: </strong>Adán me refiero a su interior, a su alma, a sus sentimientos</p>
+         <br><p style="color: #00af09;"><strong>ADAN: </strong>Pues si lo intentamos, pero en serio que las mujeres son muy complicadas, ¡¡¡¡de todo la arman de pedo!!!! Mira, préstame tu cuerpo una vez más y ya para poder explicarte, ándale siiiiiii</p>
+         <br><p style="color: #053ef8;"><strong>JESUS: </strong>Ok está bien, todo sea por salvar a la humanidad</p>
+         <br><p style="color:rgb(165, 1, 1);"class="typewriter-font">(Transformación) (Juntan las sillas y están en el cine, Jesús hace al hombre y Adán a la Mujer)</p>
+         <br><p style="color: #00af09;"><strong>MUJER: </strong>(Casi llorando y muy cursi) Que bonita esta la película verdad mi cielo</p>
+         <br><p style="color: #053ef8;"><strong>HOMBRE: </strong>Si mi amor está muy bonita</p>
+         <br><p style="color: #00af09;"><strong>MUJER: </strong>¿Viste cuando él le dice “Eres el lucero más grande que ilumina mi universo” que romántico no?</p>
+         <br><p style="color: #053ef8;"><strong>HOMBRE: </strong>Si mi amor muy romántico</p>
+         <br><p style="color: #00af09;"><strong>MUJER: </strong>A mi como me gustaría que alguien me dijera así y ser lo más importante en su vida, como el de la película</p>
+         <br><p style="color: #053ef8;"><strong>HOMBRE: </strong>(Muy tierno) Mi amor, ya sabes que tu eres lo más importante para mi</p>
+         <br><p style="color: #00af09;"><strong>MUJER: </strong>(Chiquiona) Si, pero nunca me lo dices bombón</p>
+         <br><p style="color: #053ef8;"><strong>HOMBRE: </strong>Claro que si mi amor, tu eres lo mas importante para mi, no por nada eres mi esposa, además sabes que…</p>
+         <br><p style="color: #00af09;"><strong>MUJER: </strong>(Lo interrumpe) Ya gordo, no me dejas escuchar, déjame ver la película.</p>
+         <br><p style="color: #053ef8;"><strong>HOMBRE: </strong>Ok mi amor</p>
+         <br><p style="color: #00af09;"><strong>MUJER: </strong>Si de por si nunca me traes al cine, y ahora que por fin me trajiste me estás interrumpe e interrumpe</p>
+         <br><p style="color: #053ef8;"><strong>HOMBRE: </strong>Bueno si ya mi amor perdón</p>
+         <br><p style="color: #00af09;"><strong>MUJER: </strong>(Se empieza a enojar) Me estas dando el avión?</p>
+         <br><p style="color: #053ef8;"><strong>HOMBRE: </strong>No mi amor como crees</p>
+         <br><p style="color: #00af09;"><strong>MUJER: </strong>(Sube de tono, poco más enojada) Claro que si Juan, me estas dando el avión, ¡¡¡¡si crees que no te conozco!!!! Estas como cuando fuimos a casa de tus papas, el día que lleve el pastel que hice, que por cierto tu mamá me hizo unas caras!!!! Y tu????? No fuiste para defenderme, nada mas me diste el avión así como ahoritA</p>
+         <br><p style="color: #053ef8;"><strong>HOMBRE: </strong>(El sigue muy tranquilo) Claro que no mi amor, mi mamá no te hizo caras, solo que el pastel era helado y fuimos hasta Cuernavaca, 4 horas de camino en el sol, el pastel no llegó muy bien y a mi mamá le dio risa, pero estaba jugando contigo</p>
+         <br><p style="color: #00af09;"><strong>MUJER: </strong>¡¡¡¡A!!!! A ti te va a gustar que mi papá o mi mamá jueguen así contigo, que cuando te pusiste tu camisa ridícula de flores en año nuevo, mi papá se hubiera reído de ti en tu propia cara</p>
+         <br><p style="color: #053ef8;"><strong>HOMBRE: </strong>¡Esa camisa me la puse en año nuevo porque tu mamá me la regaló en Navidad!</p>
+         <br><p style="color: #00af09;"><strong>MUJER: </strong>¡¡¡¡¡A!!!!! Ahora resulta que no te gustó la camisa, mi mamá que te la dio con tanto cariño, porque ni siquiera le habías salido en el intercambio, fue solo un detalle que ella tuvo para ti Juan, y ahora dices que no te gusto!!!! Te gustaría que yo hubiera hecho lo mismo cuando tu papá me regaló las pantuflas horribles de corazones</p>
+         <br><p style="color: #053ef8;"><strong>HOMBRE: </strong>Mi amor te las pones diario, que, porque dices que están muy cómodas, aparte son ortopédicas y especiales para tu juanete</p>
+         <br><p style="color: #00af09;"><strong>MUJER: </strong>Me las pongo por compromiso, las odio</p>
+         <br><p style="color: #053ef8;"><strong>HOMBRE: </strong>(Está tranquilo, pero se desespera un poco) Compromiso con quien???? ¡¡¡¡Mis papas no te las ven puestas, pues ya no te las pongas y ya!!!!</p>
+         <br><p style="color: #00af09;"><strong>MUJER: </strong>¡¡¡¡¡Lo hago para que tú me las veas, y digas!!!!! Mira que hermosa mi mujer que le gustan tanto las pantuflas que le dieron mis papas, pero eso tu no lo valoras y ya me dijiste que estoy deforme, que si mi juanete, que si no se que, ya nada mas falta que me digas gorda, ándale ándale ya que me empezaste a ofender, síguele</p>
+         <br><p style="color: #053ef8;"><strong>HOMBRE: </strong>Yo no te dije deforme mi amor, es que no sé a qué viene todo esto, ¿¿¿¿¿porque empezaste todo esto?????!!!!</p>
+         <br><p style="color: #00af09;"><strong>MUJER: </strong>¡¡¡¡¡A ahora yo soy la que empecé!!!!! De veras que te pasas Juan, me estas insulte e insulte y ahora yo soy la que empecé no!!!!! Si me querías arruinar la película, lo lograste, Gracias e Gracias!!!! De por si nunca me traes y ya no la pude ver, porque estas discute y discute de verdad que no te entiendo Juan, no te entiendo!!!!! Ya vámonos</p>
+         <br><p style="color:rgb(165, 1, 1);"class="typewriter-font">(Salen de transformación)</p>
+         <br><p style="color: #00af09;"><strong>ADAN: </strong>¡¡Veeeeeeeeeeees!! Que pedo con esta vieja!!!!! Todos las mujeres deberían de traer cámara integrada con audio y video para que se den cuenta como empiezan casi siempre las discusiones!!!!! Ellas empiezan a pelear pero al final el hombre siempre tiene la culpa!!!! No friegues. ¡¡¡¡Pinche vieja Loca!!!!</p>
+         <br><p style="color: #053ef8;"><strong>JESUS: </strong>(Con fuerza y enojo) ¡¡¡¡Adán ya cállate, no te expreses así de las mujeres!!!! ¡¡¡¡A ellas se les debe respetar por sobre todas las cosas!!!!</p>
+         <br><p style="color: #00af09;"><strong>ADAN: </strong>Si Jesús tienes razón, pero que ellas también nos respeten a nosotros, o sea si está bien que los hombres no debemos hablarles así por ser mujeres, pero ellas tampoco deben hablarnos así a los hombres, que también nos respeten, ¿¿¿¿¿pues no que somos iguales????? Quien te entiende. Y luego ya hay mujeres mas groseras y guarras que la mismísima Lola la Trailera. ¡¡¡¡¡Algunas hablan y se saben mas grosería que nosotros!!!!!</p>
+         <br><p style="color: #053ef8;"><strong>JESUS: </strong>Sí en eso tienes razón, antes las mujeres no decían groserías, pero la modernidad y la liberación femenina a eso las a orillado.</p>
+         <br><p style="color: #00af09;"><strong>ADAN: </strong>Si, pero la educación es la educación, de que nos sirve tanta modernidad si ahora ya no sabes si le estás hablando a un hombre o una mujer por el léxico que manejan</p>
+         <br><p style="color: #053ef8;"><strong>JESUS: </strong>¡¡¡¡¡Tampoco está bien que los hombres digan groserías!!!!! Pero eso casi siempre pasa cuando los humanos explotan por alguna razón, por eso siempre es mejor decir las cosas cuando te molesten, así podrás expresarte con tus mejores palabras y no decirlas ya que te harten pues lo expresarás con tus mejores insultos.</p>
+         <br><p style="color: #00af09;"><strong>ADAN: </strong>Que sabias palabras Jesús, como siempre, comenzaré a expresar las cosas en el momento que me molesten para poder decirlo de manera relaja y tranquila. Y Así hablarles con más respeto y de manera mas sutil. Tienes razón Jesús</p>
+         <br><p style="color: #053ef8;"><strong>JESUS: </strong>¡¡¡¡¡Vaya!!!!! Vamos progresando</p>
+         <br><p style="color: #00af09;"><strong>ADAN: </strong>Pero que también ellas lo hagan, porque déjame decirte que ellas son especialistas en guardar cositas en su bolsita de encabronamiento, ¡¡¡¡¡para que cuando ya este llena explote y te las puedan echar todas juntas!!!!!</p>
+         <br><p style="color: #053ef8;"><strong>JESUS: </strong>Eso ya les tocará a ellas, pero alguien tiene que ceder y porque no hacerlo ahora nosotros los hombres.</p>
+         <br><p style="color:rgb(165, 1, 1);"class="typewriter-font">(Suenan truenos y centellas en el cielo, el diluvio está por comenzar)</p>
+         <br><p style="color: #053ef8;"><strong>JESUS: </strong>Adán, tenemos que apurarnos, el último diluvio universal está por comenzar</p>
+         <br><p style="color: #00af09;"><strong>ADAN: </strong>¿¿¿¿¿Pero pues ya las estoy entiendo que no?????</p>
+         <br><p style="color: #053ef8;"><strong>JESUS: </strong>Al parecer no ha sido suficiente</p>
+         <br><p style="color: #00af09;"><strong>ADAN: </strong>Pues ya dije que voy a decir las cosas cuando me molesten y hablarles mas sutil y con respeto como a ellas les gusta</p>
+         <br><p style="color: #053ef8;"><strong>JESUS: </strong>No es lo que les guste, es lo que merecen. Creo que es lo que tienes que terminar de entender</p>
+         <br><p style="color:rgb(165, 1, 1);"class="typewriter-font">(Suenan mas truenos y centellas)</p>
+         <br><p style="color:rgb(165, 1, 1);"class="typewriter-font">(Llega un nuevo pensamiento de una mujer al cerebro Mater) (Los dos se paran y van hacia el para abrir el papelito)</p>
+         <h2 id="05_AL_INTERMEDIO"></h2>
+         <br><p style="color: #053ef8;"><strong>JESUS: </strong>Llegó un nuevo pensamiento Adán y debe ser uno importante, porque viene en papel dorado</p>
+         <br><p style="color: #00af09;"><strong>ADAN: </strong>A ver préstamelo (Se lo quita y lo abre) Si es muy importante, este pensamiento es de…</p>
+
+
+         
+
+         <br>
+         <h2>I N T E R M E D I O</h2>
+
+         <br><p style="color: #00af09;"><strong>ADAN: </strong>(Flash back) ¿Si es muy importante, este pensamiento es de… Eva? Eva que tiene que hacer aquí si ella ya tuvo su estelar en la obra pasada carajo!!</p>
+         <br><p style="color:rgb(165, 1, 1);"class="typewriter-font">(Comienza a leer) (Audio de Eva) (Comienza muy romántica)</p>
+         <br><p style="color: #f325ae;"><strong>EVA (audio):</strong> Mi amado Adán, te mando este pensamiento femenino en calidad de urgente, porque ya está empezando a llover, eso significa que…(Sube de tono a enojado) sigues de tarado sin comprender el cerebro femenino, mas te vale que te pongas las pilas y te agarres tus cositas para comprendernos, porque nosotras ya les dimos una oportunidad y por tu culpa se va a echar todo a perder, si no salvas a la humanidad, vas a ver llegando a la casa re cabrón, voy a hacer que me entiendas a punta de fregadazos!!!! Así que o nos entiendes o nos entiendes no tienes otra opción. (Tono sarcástico) Me entendiste mi amorcito???? PD. Mañana no vas a tener que ponerte para la fiesta de Sor Juana, porque lave tu traje y lo tenia en el tendedero upsiiii y cómo empezó a llover por culpa de quien sabe quien, así que ni modo, te vas a tener que ir con tu hoja de parra como Dios te trajo al mundo, a ver como te va, porque va a haber pura madre. Bye bye no olvides que te amo </p>
+         <br><p style="color: #00af09;"><strong>ADAN: </strong>Esta mujer es una sádica, sarcástica, desgraciada, lo ves Jesús, ellas también son malas muy malas!!!!! Me das miedo Teresa!!!! Digo….Me das miedo Eva... 
+            Jesús que vamos a hacer????? ¡¡¡¡Todo depende de nosotros y de verdad no logro comprender el pensamiento femenino!! </p>
+
+            <br><p style="color: #053ef8;"><strong>JESUS: </strong>¿Nosotrooooos?, me suena a manada, yo si las comprendo, el problema eres tú, (Comienza a enojarse) es que eres muy terco, hueco, insensible, solo debes de tener más empatía para con ellas, ser más amable, más sutil, más tierno, detallista, ¡¡¡¡¡¡¡¡¡pero a la vez fuerte, protector, independiente, capaz!!!!!!!!! (Muy enojado) Es tan difícil de lograr eso Adán??????</p>
+            <br><p style="color: #00af09;"><strong>ADAN: </strong> ¡¡¡¡¡Relájate te pones bien loco!!!!! Así como cuando le aventaste sus cositas a los pobres mercaderes que estaban afuera del templo, te agarraran en tu mal momento y reaccionas así!!!!! Neta relájate</p>
+            <br><p style="color: #053ef8;"><strong>JESUS: </strong> Si perdón, lo siento, es que también nosotros los hombres tenemos nuestras etapas, nuestros malos días. Así como ellas se ponen de malas cuando tienen su periodo, nosotros también tenemos cambios hormonales </p>
+            <br><p style="color: #00af09;"><strong>ADAN: </strong> ¡¡¡¡¡Así es y todo por falta de sexo!!!!!</p>
+            <br><p style="color: #053ef8;"><strong>JESUS: </strong> ¿Cómo? No entiendo</p>
+            <br><p style="color: #00af09;"><strong>ADAN: </strong> "¡Me imagino! Dicen que tú nunca... (gestos). Te explicaré como experto  según los sexólogos Barba y Flores, la falta de sexo causa cambios de humor e irritabilidad en hombres, llamado Síndrome de Irritabilidad Masculina (SIM). Durante el sexo, el cuerpo libera endorfinas que reducen estrés y dolor, mientras la oxitocina genera tranquilidad y bloquea temporalmente las hormonas del estrés." Por eso, si no tienes sexo, tienes estrés, ¡si tienes estrés pues mientas madres y estas de malas todo el día!! Yo creo que por eso tú, ese día…</p>
+            <br><p style="color: #053ef8;"><strong>JESUS: </strong> Adán, ni se te ocurra decir esas estupideces.</p>
+            <br><p style="color: #00af09;"><strong>ADAN: </strong> Ta bueno, tú eres Jesús, pero los hombres normales necesitamos sexo. Las mujeres no cooperan y quieren tenernos contentos. Empiezas cachondo, con besos, te acercas y dices  (En tono sexual) "Mi amor dime algo sucio"… (imita la respuesta de su esposa) Tus calzones… están sucios, tengo ropa que lavar, comida que hacer, niños que cuidar y planchar (En tono sexual otra vez) "Pues vamos a planchar" (imita la respuesta de su esposa) Ayúdame entonces, plancha tú allá y yo acá, ayuda en casa Adán, estamos en época moderna. Si hablas del otro planchar, olvídalo, estoy cansada y me duele la cabeza. ¡Así no se puede! Y duele cuando están horneados, toca recurrir a la mejor amiga (Se refiere a la mano). Nos traen hirviendo todo el día, por eso vemos a otras mujeres. Lo peor es que nuestra excitación se nota, ellas pueden andar calientes y nadie lo sabe, pero uno no puede ocultarlo, y Dios me hizo bien, muy bien (Se refiere al tamaño)</p>
+            <br><p style="color: #053ef8;"><strong>JESUS: </strong> ¡¡¡¡Adán ya basta!!!! Ya entendí, y eso de estar bien hecho como tu le llamas, es lo de menos, a ellas no les importa el tamaño, lo importante es que lo hagas con amor, que seas sutil, que les digas cosas hermosas y lo valiosas que son, ¡¡¡¡que la procures en el momento de hacer el amor y no solo las ocupes para tu propia satisfacción como lo hacen muchos!!!!</p>
+            <br><p style="color: #00af09;"><strong>ADAN: </strong> Lo bueno es que dices que no sabes nada de eso eeeee jeje, y si en lo que dices tienes razón, tenemos que ser mas complacientes, mas amorosos, mas sutiles, procurarlas y lograr una satisfacción mutua y no solo agarrarlas como objeto sexual. En eso te doy toda la razón</p>
+            <br><p style="color: #053ef8;"><strong>JESUS: </strong> Vamos progresando Adán</p>
+            <br><p style="color: #00af09;"><strong>ADAN: </strong> ¡¡¡Peeeeeeero, en lo que si estás muy equivocado es en el tamaño!!! Que el tamaño no les importa?????? Por favor!!!!! En que mundo vives??????? Te lo voy a demostrar (Transformación) (Adán se acuesta en el piso como colegiala a hablar por teléfono haciendo a una jovencita) </p>
+            <br><p style="color: #00af09;"><strong>ADAN: </strong> ¡¡¡¡Qué onda wey!!!! ¡¡¡¡Como estas!!!!</p>
+            <br><p style="color: #053ef8;"><strong>JESUS: </strong> Bien amiga, ¿y tú????</p>
+            <br><p style="color: #00af09;"><strong>ADAN: </strong> ¡Yo regresando de Tequisquiapan, me fui con Víctor el fin de semana!</p>
+            <br><p style="color: #053ef8;"><strong>JESUS: </strong> ¡Ay ya se! ¡Es hiper guapo!</p>
+            <br><p style="color: #00af09;"><strong>ADAN: </strong> ¡Pues super padre amiga! Víctor es mega divertido, sus papas son lo máximo, es tierno, cariñoso, deportista, me llevo a peña de Bernal, me compró mil cosas, ¡¡¡¡¡ay no super lindo...</p>
+            <br><p style="color: #053ef8;"><strong>JESUS: </strong> ¡Pues lo tiene casi todo el tipo la verdad!</p>
+            <br><p style="color: #00af09;"><strong>ADAN: </strong> ¡No, todavía no andamos y yo creo que no vamos a Andar!</p>
+            <br><p style="color: #053ef8;"><strong>JESUS: </strong> ¿Por qué? Si se ve que la pasaste increíble...</p>
+            <br><p style="color: #00af09;"><strong>ADAN: </strong> Pues es que te digo algo aquí entre nos.…lo tiene chiquito (Hace señas con el dedito)</p>
+            <br><p style="color: #053ef8;"><strong>JESUS: </strong> ¡Ya se amiga! ¡Que coraje! Pensé que habías encontrado al hombre ideal, pero pues no, su “detallito” tenía que tener...</p>
+            <br><p style="color: #00af09;"><strong>ADAN: </strong> Ashhhh me choca. Pues si igual y si sigo saliendo con el, porque me la pase genial, y pues tiene casa en Tequis y te digo que me compró mil cosas, a quien le dan pan que llore.</p>
+            <br><p style="color: #053ef8;"><strong>JESUS: </strong> Pues si ni modo, mientras seguirás fingiendo que te excita y ya está.</p>
+            <br><p style="color: #00af09;"><strong>ADAN: </strong> Pues si a ver qué pasa. A ver si dentro de 15 días te vas con nosotros ¡¡¡¡va!!!!</p>
+            <br><p style="color: #053ef8;"><strong>JESUS: </strong> ¿Y qué le dirás?</p>
+            <br><p style="color: #00af09;"><strong>ADAN: </strong> Así le digo que no puedo tener nada con él porque estas tu y que me da pena y la pasamos cool, ¡¿sale?!</p>
+            <br><p style="color: #053ef8;"><strong>JESUS: </strong> ¡Ya estás amiga! Igualmente, te quiero nena, besitos, bye bye.</p>
+            <br><p style="color:rgb(165, 1, 1);"class="typewriter-font">(Termina transformación) </p>
+            <br><p style="color: #00af09;"><strong>ADAN: </strong> ¡¡¡¡¡Lo ves Jesús claro que les importa el tamaño!!!!! Aparte son unas interesadas</p>
+            <br><p style="color: #053ef8;"><strong>JESUS: </strong> No Adán, no es así en todos los casos, ¿no a todas las mujeres les importa eso… y a ver a ustedes no? ¿Adán que es en lo que te fijas en una mujer?</p>
+            <br><p style="color: #00af09;"><strong>ADAN: </strong> (Nervioso) Pues en sus…ojos</p>
+            <br><p style="color: #053ef8;"><strong>JESUS: </strong> Estamos aquí para que seas honesto Adán, la humanidad está por terminar y tu sigues con tus mentiras. ¿En qué te fijas Adán?</p>
+            <br><p style="color: #00af09;"><strong>ADAN: </strong> Pues obvio Jesús, en sus Bubis, en sus pompis</p>
+            <br><p style="color: #053ef8;"><strong>JESUS: </strong> Lo ves, tú también te fijas en el tamaño. Las mujeres se operan pensando que más grande es mejor, igual que los hombres. Todos los cuerpos son hermosos y hay gustos diversos. A algunos les gustan güeras, morenas, chaparritas, altas... igual pasa con los tamaños. No debería importar tanto el físico sino el interior. Personas sin el estereotipo de belleza logran verse más atractivas con seguridad y actitud. En serio Adán, no todo es físico, estos cuerpos terminarán arrugados y en polvo. No vivas frustrado desperdiciando tu felicidad. Los recuerdos maravillosos se irán contigo y dejarás en otros tu persona. Lo que perdura es lo que viajaste, amaste e hiciste por los demás. Tu traje se irá a la tierra, pero tu espíritu y legado quedarán en la memoria de todos... si logramos salvar a la humanidad.</p>
+            <br><p style="color: #00af09;"><strong>ADAN: </strong> Pues si Jesús tienes toda la razón, no se en que momento los seres humanos nos volvimos tan superficiales. Es más no se quien fue el que invento o decidió quien era feo o quien era guapo, o que ser gordo estaba mal y estar flaco estaba bien, que ser alto era lo atractivo y que por ser chaparro no lo eras!!!! Ya estoy entendiendo muchas cosas Jesús y no solo de las mujeres, si no de la humanidad </p>
+            <br><p style="color:rgb(165, 1, 1);"class="typewriter-font">(Vuelven a sonar truenos y centellas)</p>
+            <br><p style="color: #053ef8;"><strong>JESUS: </strong> Me da mucho gusto Adán, aunque creo que no es eso lo que debes de entender, ¡¡¡¡el diluvio parece continuar!!!! Y mira ya se está metiendo el agua por el techo, hay una gotera</p>
+            <br><p style="color: #00af09;"><strong>ADAN: </strong> ¡¡¡¡Ay no!!!! ahora si nos vamos a morir todos…pues ya Jesús me doy por vencido, si tú no me puedes ayudar, imagínate, ¡¡¡¡¡nadie podrá hacerlo!!!!! Estoy muy estresado Eva me va a matar!!!! (Camina nervioso y sin sentido) </p>
+            <br><p style="color: #053ef8;"><strong>JESUS: </strong> Primero debes de relajarte Adán, así de estresado como estás mucho menos podrás encontrar la solución, (Hay una gotera en el techo y llena una botellita con agua de lluvia mientras habla) si te enfocas en el problema solo traerás más problemas, si te enfocas en la solución, las ideas vendrán a tu cabeza. (Le da la botella de agua a Adán) Quieres agua?</p>
+            <br><p style="color: #00af09;"><strong>ADAN: </strong> ¡¡¡¡¡Si gracias!!!!! (Toma un poco de agua y se comienza a relajar) Pues creo que no podremos salvar a los humanos, son demasiados siglos haciendo lo mismo, para que nosotros podamos cambiarlo en tan poco tiempo</p>
+            <br><p style="color: #053ef8;"><strong>JESUS: </strong> Si mi Padre dijo que podíamos hacerlo, es que se puede lograr, ¿solo hay que descubrir cómo? </p>
+            <br><p style="color: #00af09;"><strong>ADAN: </strong> ¡¡¡¡¡Pues tu eres Dios no, porque no nos salvas y ya!!!!!</p>
+            <br><p style="color: #053ef8;"><strong>JESUS: </strong> Y dale la burra al trigo, porque debe de haber algún aprendizaje, y también dependemos del padre, recuerda que yo soy Dios hijo y mi hermano el espíritu santo. Tu crees que si solo dependiera de mi no me hubiera yo bajado de la cruz y listo!!!!! Pero las cosas no funcionan así Adán, mi padre nos ama mucho a todos, como lo que somos, sus hijos, ¡¡¡¡¡¡pero algo debemos de aprender siempre!!!!!!</p>
+            <br><p style="color: #00af09;"><strong>ADAN: </strong> A veces los caminos de Dios son tan difíciles de entender </p>
+            <br><p style="color: #053ef8;"><strong>JESUS: </strong> ¿Ay y el de los hombres no?? Ustedes son complicados. Los humanos se preocupan por cosas banales. Recibo millones de plegarias absurdas (Imita a los humanos) "Jesús por favor, que me gane la lotería", ¡cuando nunca compra billetes! ¿Quiere que yo le compre el ganador y se lo lleve? Soy milagroso, pero no abusen... (Continúa) "Que mi jefe no me corra" cuando llega tarde y trabaja mal. "Que mi esposa no se enoje" mientras se va de fiesta, aunque a ella le molesta. "Que no esté embarazada" ¡pero tiene sexo sin protección! ¡¡¡¡Por Diooooos!!!! Digo...por miiiiiii. Y hay miles más absurdos. Ustedes no se ayudan, yo no puedo actuar por ustedes, son libres. Solo puedo ayudarles ocasionalmente en situaciones difíciles. ¡¡¡¡Soy poderoso, pero también son un chin...chorro!!!! Siempre los escucho, pero hay prioridades. </p>
+            <br><p style="color: #00af09;"><strong>ADAN: </strong> Pues sí, otra vez tienes razón, los humanos siempre hacemos una tormenta en un vaso de agua (Está agitando la botella de agua que le dio Jesús) </p>
+            <br><p style="color: #053ef8;"><strong>JESUS: </strong> Así es, los humanos siempre hacen una tormenta en un vaso de agua</p>
+            <br><p style="color: #00af09;"><strong>ADAN: </strong> (Sigue agitando una botella de agua) (La observa y reflexiona) Y como podemos calmar la tormenta dentro del vaso de agua????? Claro aquí está la clave, dejando de agitarla, de perturbarla, dejar de hacerle movimientos abruptos, moviéndolo con delicadeza, con cuidado, con tranquilidad, con paciencia, hasta que las aguas se calmen, se relajen, se tranquilicen, solo así las aguas estarán en paz</p>
+
+            
+            <br><p style="color: #053ef8;"><strong>JESUS: </strong> (Sonríe ligeramente pues Adán por fin entendió la lección) Así es Adán, los humanos son el agua, la botella es el mundo que habitan, si todo el tiempo están corriendo, apresurados, peleándose, (Hace con las manos movimientos mímicos de lo que está diciendo, como si sus manos fueran el agua) moviéndose abruptamente sin control, golpeándose unos con otros, luchando por salir o por entrar, luchando para controlarse unos a otros, las aguas siempre estarán en tormenta, pero si intentan moverse con cautela, con paciencia, con respeto mutuo y con más armonía, lograrán que esas aguas se calmen y por fin estén en paz!!!! </p>
+
+            <h2 id="06_llega_EVA"></h2>
+            <br><p style="color: #00af09;"><strong>ADAN: </strong> Jesús, eres un maestro, un verdadero maestro, por fin entendí un poco más, y no solo a las mujeres si no a toda la humanidad, gracias por la lección. Las aguas cesaron, la lluvia terminó, creo que lo hemos logrado!!!! </p><br><br><br>
+            
+            
+            <h2>Llegada de EVA</h2>
+
+            <br><p style="color:rgb(165, 1, 1);"class="typewriter-font">(Suena un rayo fuerte, Eva entra a escena)</p>
+            
+            
+            <br><p style="color: #f325ae;"><strong>EVA: </strong> (Entra muy molesta, un poco mojada) A ver Adán que no puedes hacer nada bien???? Querétaro esta ya todo inundado!!!! Las calles son un caos, me hice casi hora y media de nuestro paraíso, o sea del jardín Guerrero, hasta aquí, a Casa Blanca!!!! Los Ubers me cobraban carísimo y el Qro bus venia hasta la madre!!!!!! Y allá afuera nada mas no deja de llover todo por tus estupideces…</p>
+            <br><p style="color: #053ef8;"><strong>JESUS: </strong> Hola Eva, de hecho, Adán acaba de…</p>
+            <br><p style="color: #f325ae;"><strong>EVA: </strong> Jesús con todo respeto, pero déjame hablar… los hombres nunca nos dejan hablar </p>
+            <br><p style="color: #00af09;"><strong>ADAN: </strong> ¿¿¿¿No te dejo hablar???? ¿¿¿¿¿Pero si nunca te para el pico????? </p>
+            <br><p style="color: #f325ae;"><strong>EVA: </strong> Cállate Adán no es cierto, las mujeres casi ni hablamos, pero ahora si me vas a escuchar, y no seas grosero, por eso estamos en esta situación, la humanidad está por terminar y tu sigues de pelado, por eso Dios nos está castigando, que parte no entendiste de que tienes que comprender mas el cerebro femenino para que todo esto termine, pero noooooo el señor se monta en su macho y no quiere cambiar… </p>
+            <br><p style="color: #00af09;"><strong>ADAN: </strong> No mi amor, de hecho, justo ibas llegando cuando el diluvio termino, por fin logre entenderlas y no solo a las mujeres si no a toda la humanidad</p>
+            <br><p style="color: #f325ae;"><strong>EVA: </strong> ¡¡¡¡A otra estúpida con ese hueso Adán, si vengo empapada y todo por tu culpa!!!! Pero vamos a acabar de una vez por todas con este diluvio, te voy a explicar rápido lo que queremos y como pensamos las mujeres. Todo lo que tengo que resolver yo, parezco tu mamá, a no…se me olvida que tu no tienes madre</p>
+            <br><p style="color: #00af09;"><strong>ADAN: </strong> (Entre dientes) Y si la tuviera ojalá no fuera como tu </p>
+            <br><p style="color: #f325ae;"><strong>EVA: </strong> ¿¿¿¿Que dijiste???? Te escuché Adán, te escuché. </p>
+            <br><p style="color: #00af09;"><strong>ADAN: </strong> Pues lo que oíste y si tengo mamá se llama María y ella no es como tú </p>
+            <br><p style="color: #f325ae;"><strong>EVA: </strong> ¡¡¡¡Eres como todos los hombres, tienen mamitis!!!! Ay mi mamá cocina mejor que tu, siempre me hacía mis platillos favoritos, mi mamá me tenia bien planchadita mi ropa, mi mamá dejaba mis calcetines bien blancos, mi mamá siempre tenía bien limpia la casa, mi mamá, mi mamá siempre tu mamá </p>
+            <br><p style="color: #00af09;"><strong>ADAN: </strong> Ay tu mejor ni digas, que las mujeres también tienen mamitis, “vamos a comer con mi mamá este fin de semana, voy a llevar a mi mamá al super”</p>
+            <br><p style="color: #053ef8;"><strong>JESUS: </strong> ¡Tranquilícense! Eva, cuando fuiste madre también consentiste a tus hijos. Es normal, las madres quieren lo mejor para ellos. Pero te contradices  a los hombres los educan principalmente las mujeres, haciéndoles creer que merecen todo. Luego, cuando son sus parejas, no les gusta ese comportamiento. Son patrones que las mujeres han repetido. Si educaran a sus hijos para ser equitativos y serviciales, todo sería diferente. Pero siempre les resuelven la vida, por eso de adultos esperan que sus parejas hagan lo mismo.</p>
+            <br><p style="color: #f325ae;"><strong>EVA: </strong> Pues si puede que tengas razón. Pero es que hay limites!!!! Hay hombres que literal no pueden vivir sin su mamá y se la pasan comparándonos todo el tiempo</p>
+            <br><p style="color: #053ef8;"><strong>JESUS: </strong> Los hombres y las mujeres, de manera inconsciente, casi siempre buscan a personas que se parezcan a sus padres, los hombres buscan a una mujer que se parezca a su madre y las mujeres a su padre, así hayan sido buenos o malos, pero es lo normal. Pero está en ustedes romper con esas cadenas </p>
+            <br><p style="color: #f325ae;"><strong>EVA: </strong> (Toma un pensamiento rojo) Pues si Jesús, pero luego las mujeres queremos encontrar a alguien diferente y resulta que todos son iguales, por ejemplo, esta pobre, (Leyendo) lleva 2 matrimonios y 3 parejas y todos le han salido golpeadores y borrachos.</p>
+            <br><p style="color: #053ef8;"><strong>JESUS: </strong> ¡¡¡¡Se llama Raquel Martínez, la conozco bien!!!! Su padre era borracho y golpeador también, ella siempre va a los bares o a los antros a tratar de encontrar a su hombre ideal, tal vez si buscara en otro tipo de lugares, encontraría a gente diferente y por fin a la persona correcta. Me ha pedido tantas veces encontrar a su príncipe azul!!! Y se los he puesto enfrente, pero ella parece no verlos. Sigue buscando el mismo patrón </p>
+            <br><p style="color: #00af09;"><strong>ADAN: </strong> Exactamente, y es que las mujeres son muy complejas, siempre nos ponen algún pero. Este si, pero no porque este chaparrito, este si, pero no porque no tiene trabajo, este si, pero no porque lo tiene chiquito, este si, pero no porque esta jodido, son unas interesadas </p>
+            <br><p style="color: #f325ae;"><strong>EVA: </strong> ¡¡¡¡Pues que querías lagartija!!!! Que andemos con cualquier pobretón, una necesita sus lujos, una buena “Mamá Van” para ir al super y recoger a los niños, una que otra joyita para presumirle a las amigas, una casa bonita, que nos lleven a buenos lugares, una nana que te ayude con los niños, una sirvienta que te ayude en casa… y ya si está bien dotado…pues que mejor, eso ya es un plus </p>
+            <br><p style="color: #00af09;"><strong>ADAN: </strong> ¿¿¿¿¿¿A si?????? Y tu helado de que sabor lo quieres???? Ustedes que van a hacer mamasita???? ¿Las mujeres piden mucho de un hombre, pero ustedes que dan? </p>
+            <br><p style="color: #f325ae;"><strong>EVA: </strong> ¡¡¡¡¡Hijos Adán, Hijos!!!!! Se nos deforma todo el cuerpo, nos salen estrías, nos dan mareos, vomito, cambios de humor, antojos, nos duele la espalda, ¡¡¡¡nos crecen las chichis!!!!</p>
+            <br><p style="color: #00af09;"><strong>ADAN: </strong> ¿¿¿¿Pues no es lo que todas las mujeres quieren???? Que les crezcan las chichis</p>
+            <br><p style="color: #f325ae;"><strong>EVA: </strong> Pues sí, bueno, no todas, pero no de leche, duelen mucho, aunque no lo creas, aaaaa pero los hombres no se ponen a pensar en eso, ya te quiero ver a ti 9 meses con los testículos inflamados a ver que sientes. Y no solo sufrimos en el embarazo, cada mes tenemos que lidiar con el periodo, que también te sientes de la fregada!!!!!! (Se refiere a Jesús) Ya que andamos por aquí Jesús, no se podrá que nos quiten el periodo??? ¿O que sea cada 3 o 4 meses por lo menos?</p>
+            <br><p style="color: #053ef8;"><strong>JESUS: </strong> Eva el cuerpo de la mujer es perfecto, todo tiene una finalidad creadora y con respecto a lo que dices de que las mujeres solo dan hijos, estás muy mal, precisamente por ese pensamiento es que las mujeres y hombres piensan que solo sirven para procrear y criar a los hijos y no es así. En la actualidad ya hay muchas mujeres que trabajan, que son exitosas, que son empresarias, madres solteras que sacan adelante a su familia, o algunas que deciden nunca tenerla. Ya deben de cambiar ese estereotipo de la mujer.</p>
+            <br><p style="color: #00af09;"><strong>ADAN: </strong> Así es son otros tiempos. ¡¡¡¡Los hombres le entramos a la cocina y ustedes al trabajo!!!!</p>
+            <br><p style="color: #053ef8;"><strong>JESUS: </strong> Y siempre entre los dos va a ser más fácil, si se reparten las actividades en todos los aspectos, tendrán más tiempo para convivir en familia, ¡¡¡más tiempo para ser felices!!!</p>
+            <br><p style="color: #f325ae;"><strong>EVA: </strong> Tiempo, tiempo, eso es lo que yo no tengo, ¡¡¡¡nunca me da tiempo de nada!!!!</p>
+            <br><p style="color: #00af09;"><strong>ADAN: </strong> Pues como te va a dar tiempo, si te tardas siglos en arreglarte, me acuerdo cuando empezamos a salir, me citabas a una hora en tu jacal, me habría tu tía la vaca, ¡¡¡¡“Siéntese joven ahorita baja Eva no se tarda muuuuucho” y después de mínimo una hora bajabas!!!! (Enamorado) eso sí, te veías espectacular!!!</p>
+            <br><p style="color: #f325ae;"><strong>EVA: </strong> Pues si menso, por eso me tardaba, para ponerme bonita para ti</p>
+            <br><p style="color: #00af09;"><strong>ADAN: </strong> Y te lo agradezco, pero porque no citarme una hora más tarde y no tenerme esperando ahí como tarado, ¡¡¡¡mi tiempo también vale!!!!</p>
+            <br><p style="color: #f325ae;"><strong>EVA: </strong> ¡¡¡Cada quien espera como quiere eeee!!! Y ya te dije, me tardaba para ponerme bella.</p>
+            <br><p style="color: #00af09;"><strong>ADAN: </strong> ¡¡¡¡¡¡¡Pero porque siempre te tardas siglos!!!!!!! Hasta para comprar ropa, te pruebas y te pruebas cosas, mas de 40 prendas y solo compras dos o a veces nada. Los hombres cuando compramos es rápido y a lo que vamos, no como ustedes. Y lo peor ahora que ya vivimos juntos y tenemos que ir a un evento, sacas casi todo el closet, te pruebas un vestido, otro, otro y miles mas y siempre acabas con el primero que te pusiste, carajo!!!!! Y siempre llega esa terrible pregunta incómoda… Cuál se me ve mejor????? Siento que se me salen anginas, comienzo a sudar frio, me tiemblan las piernas y solo pienso…cual le digo????? ¡¡¡¡¡¡¡Para mi los dos son casi iguales!!!!!!! </p>
+            <br><p style="color: #f325ae;"><strong>EVA: </strong> Ese es el problema, que los hombres nunca se fijan en los detalles (Chillona) como la vez que me corté el cabello, tu ni te diste cuenta, y tampoco cuando cambie de castaña clara a castaña oscura buaaaa</p>
+            <br><p style="color: #00af09;"><strong>ADAN: </strong> Eva te lo cortaste 2 centímetros como querías que me diera cuenta, créeme que no traigo una regla para estarte midiendo el cabello cada que salimos. A mira la Eva le media 45 centímetros y ahora le mide 40</p>
+            <br><p style="color: #f325ae;"><strong>EVA: </strong> 43 baboso ni siquiera sabes restar, y si fueron 2 centímetros, pero ahora estaba en capas</p>
+            <br><p style="color: #00af09;"><strong>ADAN: </strong> A no pues sí, que wey verdad, ¡¡¡¡¡qué diferencia!!!!! Y cuando te lo teñiste solo le subiste dos tonos, como querías que me diera cuenta!!!! Te recuerdo que las mujeres ven muchos mas colores que los hombres</p>
+            <br><p style="color: #f325ae;"><strong>EVA: </strong> Pues si, pero a nosotras las mujeres nos gusta que se fijen en ese tipo de detalles, nos gusta que nos digan que nos vemos bellas, que nos hagan algún piropo, no sé</p>
+            <br><p style="color: #00af09;"><strong>ADAN: </strong> A los hombres también nos gusta que nos digan cosas bonitas, que nos digan que nos vemos guapos, que nos hagan sentir merecedores de tenerlas a nuestro lado, que reconozcan nuestros esfuerzos, nuestros logros, que nos apoyen en las decisiones que tomamos, sentirnos amados y valorados por nuestras parejas. Ustedes piden todo para allá y poco para acá. Nosotros también nos arreglamos para ustedes, nos compramos lociones para agradarles más, para oler rico, yo hasta me pongo allá abajito, que arden un chorro, digo, ¡¿por si pasamos al siguiente nivel no?! y eso tampoco lo valoran</p>
+            <br><p style="color: #053ef8;"><strong>JESUS: </strong> Así es Eva, los hombres también necesitan cosas románticas de vez en cuando, que los hagan sentir importantes en su vida, así como lo piden ustedes. Pero tampoco que los hostiguen con mil mensajes o llamadas, ellos necesitan también de su tiempo para estar con sus amigos, salir a divertirse. Y que ustedes también lo hagan, eso siempre será sano para cualquier relación, que cada quien tenga su espacio, así cuando se ven, tienen mas cosas de que platicar, mas anécdotas que contarse y la comunicación se fortalece </p>
+            <br><p style="color: #f325ae;"><strong>EVA: </strong> ¡¡¡¡¡Ay si, no!!!! para que este wey se vaya con otras viejas</p>
+            <br><p style="color: #00af09;"><strong>ADAN: </strong> ¡¡¡¡¡¡Pero si solo voy con mis amigos!!!!!!</p>
+            <br><p style="color: #053ef8;"><strong>JESUS: </strong> Eva, los celos son signo de inseguridad, si tu te sientes segura de ti misma, procuras a tu pareja y tienes comunicación con el, no tienen porque existir los celos. Todos de pronto sientes celos, pero es parte natural del ser humano, de el temor de perder a una persona, pero eso significa que se aman, pues si no te importara perderlo, no existirían los celos, pero cuando se vuelven excesivos y manipuladores, esos celos ya están mal. Deben de inculcar en ustedes la confianza, solo así se podrá fortalecer una relación. </p>
+            <br><p style="color: #f325ae;"><strong>EVA: </strong> Pues si tienes razón Jesús. (Va hacia Adán) Perdóname Gordito, no sabía que sentías todo esto mi amor!!!! Me perdonas </p>
+            <br><p style="color: #00af09;"><strong>ADAN: </strong> (Se hace el chiqueón, como jugando) No se déjame pensarlo</p>
+            <br><p style="color: #f325ae;"><strong>EVA: </strong> ¿Queeeeee?</p>
+            <br><p style="color: #00af09;"><strong>ADAN: </strong> ¿¿¿¿Así como le hacen ustedes no????</p>
+            <br><p style="color: #f325ae;"><strong>EVA: </strong> Pues piénsalo, pero en la calle, porque hoy no duermes en el Jacal, yo todavía que te pido disculpas y sales con tus ma…jaladas “Déjame pensarlo” hazme el “favron cabor”, ¡¡¡¡¡que te espere tu abuela!!!!!</p>
+            <br><p style="color: #00af09;"><strong>ADAN: </strong> Eva relájate estaba jugando. ¿Y como ustedes si pueden ponerse sus moños con nosotros?, que para perdonarnos tenemos que hacer circo, maroma y teatro, comprarles un regalito, flores, llevarles serenata, ¡¡¡¡¡pero que a ustedes les digan que no!!!! ufffffff Arde Troya, les sale la leona dormida que llevan dentro, junto con Paquita la del Barrio. </p>
+            <br><p style="color: #f325ae;"><strong>EVA: </strong> Ay ya sabes que Adán, de veras que los hombres nunca van a cambiar, son unos tarados, ególatras, egoístas de lo peor, arriba la liberación femenina, ¡¡¡¡¡nosotras somos mejores que ustedes!!!!! Yo me largo de aquí</p>
+            <br><p style="color:rgb(165, 1, 1);"class="typewriter-font">(Suena un trueno muy fuerte con la voz de Dios que dice  Eeeevvvaaaaa!!!!!!) (Comienza a llover) (Eva se sienta como niña regañada pues sabe que la regó) Perdón Señor me emocioné, era bromi</p>
+            <br><p style="color: #00af09;"><strong>ADAN: </strong> ¡¡¡¡¡Y aquí vamos de nuevo!!!!!</p>
+            <br><p style="color: #053ef8;"><strong>JESUS: </strong> Los hombres y las mujeres deberán de llegar a un entendimiento, ninguno es mejor que el otro, juntos son fuerza, ¡¡¡¡energía poder!!!! La clave esta en comunicarse unos con otros, sin titubeos, ser concretos, directos y honestos!!!!! (Los 3 salen de personaje)</p>
+            <br><p style="color: #f325ae;"><strong>EVA: </strong> Las mujeres también debemos de comenzar a entender y comprender más a los hombres, ellos también tienen sus días malos y sus días buenos, sus cambios hormonales, sus frustraciones. No los cataloguemos como el sexo fuerte, pues ellos también tienen el derecho de sentirse débiles y que nosotras estemos ahí para apoyarlos.</p>
+            <br><p style="color: #053ef8;"><strong>JESUS: </strong> Las mujeres tienen derechos, pero nosotros también, ambos sexos merecen ser valorados, respetados, queridos y amados</p>
+            <br><p style="color: #f325ae;"><strong>EVA: </strong> Así es, las mujeres hablan</p>
+            <br><p style="color: #00af09;"><strong>ADAN: </strong> Pero…. los hombres también hablan</p>
+            <br><p style="color: #ff7402;"><strong>EVA, ADAN Y JESUS: </strong>(En proscenio y hacia el público) Y ambos tienen la última palabra!!!! </p>
+
+             <h1>F I N</h1>
+             <h2>Una obra de Alecxandro Vaguióre</h1>
+
+    <script>
+        function playAudio(song) {
+            var audio = document.getElementById('audioPlayer');
+            if (audio.src !== song) {
+                audio.src = song;
+            }
+            audio.play();
+        }
+
+        function stopAudio() {
+            var audio = document.getElementById('audioPlayer');
+            audio.pause();
+            audio.currentTime = 0;
+            setVolume(0.5);  // Restablece el volumen a 50%
+            document.getElementById('volumeControl').value = 0.5;  // Actualiza el control deslizante
+        }
+
+
+        function restartAudio() {
+            var audio = document.getElementById('audioPlayer');
+            audio.currentTime = 0;
+            audio.play();
+            setVolume(0.5);  // Restablece el volumen a 50%
+            document.getElementById('volumeControl').value = 0.5;  // Actualiza el control deslizante
+        }
+
+        function setVolume(volume) {
+            var audio = document.getElementById('audioPlayer');
+            audio.volume = volume;
+        }
+
+
+
+
+        
+        // Obtener todos los elementos de texto en el cuerpo del documento
+        var textElements = document.body.getElementsByTagName('*');
+        
+        // Obtener todos los elementos de texto en el cuerpo del documento
+        var textElements = document.body.getElementsByTagName('*');
+        
+
+        function hardReload() {
+            window.location.reload(true);
+        }
+
+        function toggleMenu() {
+            const menuButton = document.querySelector('.menu-button');
+            const menuContent = document.getElementById('menuContent');
+            menuButton.classList.toggle('open');
+            menuContent.classList.toggle('open');
+        }
+       
+   
+    </script>
+</body>
+</html>
